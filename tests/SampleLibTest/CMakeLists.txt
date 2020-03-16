@@ -9,13 +9,9 @@ add_executable(${target}
 
 target_link_libraries(${target}
     PRIVATE
-    ${GTEST_BOTH_LIBRARIES}
+    GTest::GTest
+    GTest::Main
     SAMPLE_LIB
-)
-
-target_include_directories(${target}
-    PRIVATE
-    ${GTEST_INCLUDE_DIRS}
 )
 
 gtest_discover_tests(${target})
